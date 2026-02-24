@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promo Tiket Pesawat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:white;
+    box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:600;
+    color:#00a8e8;
+}
+
+.navbar a{
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+    color:#333;
+}
+
+/* Header */
+.header{
+    text-align:center;
+    padding:40px 20px 20px;
+}
+
+.header h1{
+    font-size:28px;
+    font-weight:600;
+}
+
+/* Filter Tabs */
+.tabs{
+    text-align:center;
+    margin:20px 0;
+}
+
+.tabs button{
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+    margin:5px;
+    background:#dbeefe;
+    cursor:pointer;
+}
+
+.tabs button.active{
+    background:#00a8e8;
+    color:white;
+}
+
+/* Ticket List */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.ticket-card{
+    background:white;
+    padding:20px 25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.ticket-card:hover{
+    transform:translateY(-3px);
+}
+
+.ticket-info{
+    line-height:1.8;
+}
+
+.airline{
+    font-weight:600;
+    font-size:14px;
+    color:#555;
+}
+
+.route{
+    font-size:18px;
+    font-weight:600;
+}
+
+.date{
+    font-size:14px;
+    color:#777;
+}
+
+.price-section{
+    text-align:right;
+}
+
+.price{
+    font-size:22px;
+    font-weight:700;
+    color:#0077cc;
+}
+
+.trip-type{
+    font-size:14px;
+    color:#666;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .ticket-card{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .price-section{
+        text-align:left;
+        margin-top:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">TravelBooking</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="tiket-pesawat.html">Tiket Pesawat</a>
+        <a href="#">Hotel</a>
+        <a href="#">Promo</a>
+    </div>
+</div>
+
+<!-- Header -->
+<div class="header">
+    <h1>Tiket Pesawat Mudik Turun 18% untuk Periode 14–29 Mar 2026 ✈️</h1>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+    <button class="active">Sekali Jalan</button>
+    <button>Domestik</button>
+    <button>Internasional</button>
+</div>
+
+<!-- Ticket List -->
+<div class="container">
+
+    <div class="ticket-card">
+        <div class="ticket-info">
+            <div class="airline">AirAsia Indonesia</div>
+            <div class="route">Jakarta (CGK) → Singapore (SIN)</div>
+            <div class="date">Sel, 10 Mar 2026</div>
+        </div>
+        <div class="price-section">
+            <div class="price">Rp 534.600</div>
+            <div class="trip-type">Sekali Jalan</div>
+        </div>
+    </div>
+
+    <div class="ticket-card">
+        <div class="ticket-info">
+            <div class="airline">AirAsia Indonesia</div>
+            <div class="route">Jakarta (CGK) → Kuala Lumpur (KUL)</div>
+            <div class="date">Min, 8 Mar 2026</div>
+        </div>
+        <div class="price-section">
+            <div class="price">Rp 637.700</div>
+            <div class="trip-type">Sekali Jalan</div>
+        </div>
+    </div>
+
+    <div class="ticket-card">
+        <div class="ticket-info">
+            <div class="airline">Thai Lion Air</div>
+            <div class="route">Jakarta (CGK) → Bangkok (DMK)</div>
+            <div class="date">Sel, 3 Mar 2026</div>
+        </div>
+        <div class="price-section">
+            <div class="price">Rp 1.053.000</div>
+            <div class="trip-type">Sekali Jalan</div>
+        </div>
+    </div>
+
+    <div class="ticket-card">
+        <div class="ticket-info">
+            <div class="airline">AirAsia Indonesia</div>
+            <div class="route">Medan (KNO) → Penang (PEN)</div>
+            <div class="date">Sab, 7 Mar 2026</div>
+        </div>
+        <div class="price-section">
+            <div class="price">Rp 394.100</div>
+            <div class="trip-type">Sekali Jalan</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

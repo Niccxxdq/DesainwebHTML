@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Pesawat</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .form-group select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #00a8e8;
+    outline: none;
+}
+        .btn-daftar:hover {
+            background-color: #008ac6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            color: #00a8e8;
+        }
+
+        .nav-menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #00a8e8;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .hero-text {
+            position: absolute;
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        /* Search Card */
+        .search-card {
+            background: white;
+            width: 85%;
+            max-width: 1000px;
+            margin: -80px auto 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .trip-type {
+            margin-bottom: 20px;
+        }
+
+        .trip-type button {
+            padding: 8px 18px;
+            border: none;
+            border-radius: 20px;
+            background: #e3f2fd;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .trip-type button.active {
+            background: #00a8e8;
+            color: white;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 180px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            flex: 1;
+            min-width: 150px;
+            align-self: flex-end;
+        }
+
+        .search-btn button {
+            width: 100%;
+            padding: 12px;
+            background: #00a8e8;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-btn button:hover {
+            background: #008ac6;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+
+            .search-btn {
+                align-self: stretch;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">TavelGroup</div>
+        <div class="nav-menu">
+            <a href="tiketpesawat.html">Tiket Pesawat</a>
+            <a href="#">Promo</a>
+            <a href="#">Login</a>
+            <a href="daftar.html" class="btn-daftar">Daftar</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            Tiket Pesawat Murah - Cek & Beli Harga Promo
+        </div>
+    </div>
+
+    <!-- Search Card -->
+    <div class="search-card">
+
+        <div class="trip-type">
+            <button class="active">Sekali Jalan</button>
+            <button>Pulang Pergi</button>
+            <button>Multi Kota</button>
+        </div>
+        <form action="tiketpesawat.html" method="GET">
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="form-row">
+
+                        <div class="form-group">
+                        
+                            <select name="dari" required>
+                                <option value="">-- Pilih Kota Asal --</option>
+                                <option value="CGK">Jakarta (CGK)</option>
+                                <option value="SUB">Surabaya (SUB)</option>
+                                <option value="KNO">Medan (KNO)</option>
+                                <option value="DPS">Bali / Denpasar (DPS)</option>
+                                <option value="SIN">Singapore (SIN)</option>
+                                <option value="KUL">Kuala Lumpur (KUL)</option>
+                                <option value="BKK">Bangkok (BKK)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                        
+                            <select name="ke" required>
+                                <option value="">-- Pilih Kota Tujuan --</option>
+                                <option value="CGK">Jakarta (CGK)</option>
+                                <option value="SUB">Surabaya (SUB)</option>
+                                <option value="KNO">Medan (KNO)</option>
+                                <option value="DPS">Bali / Denpasar (DPS)</option>
+                                <option value="SIN">Singapore (SIN)</option>
+                                <option value="KUL">Kuala Lumpur (KUL)</option>
+                                <option value="BKK">Bangkok (BKK)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Pergi</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jumlah</label>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Penumpang</label>
+                        <select>
+                            <option>Dewasa</option>
+                            <option>Remaja</option>
+                            <option>Anak-anak</option>
+                        </select>
+                    </div>
+
+                    <div class="search-btn">
+                        <button>Cari Tiket</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+</body>
+
+</html>
